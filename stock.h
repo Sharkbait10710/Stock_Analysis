@@ -4,13 +4,13 @@
 
 #include <iostream>
 #include <string>
-
+using namespace std;
 
 class stock {
 private:
 	int price;
 	int shares;
-	std::string symbol;
+	string symbol;
 	int highPrice;
 	int lowPrice;
 	int openingPrice;

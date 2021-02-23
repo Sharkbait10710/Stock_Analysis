@@ -45,9 +45,20 @@ ostream& operator<< (ostream& os, const stock& s)
 
 ifstream& operator>> (ifstream& inf, stock& s)
 {
-    getline(inf, s.name);
-    getline(inf, s.color);
-    getline(inf, s.gender);
+	string str;
+    getline(inf, s.symbol);
+    getline(inf, str);
+    s.openingPrice(stof(str));
+    getline(inf, str);
+    s.closingPrice(stof(str));
+    getline(inf, str);
+    s.todayHigh(stof(str));
+    getline(inf, str);
+    s.todayLow(stof(str));
+    getline(inf, str);
+    s.prevClose(stof(str));
+    getline(inf, str);
+    s.volume(stof(str));
 
     return inf;
 }

@@ -6,11 +6,12 @@
 //investors can see how their holdings performed at the end of the day by stock symbol and percent.
 //*****************
 #include <iostream>
-
+#include <iomanip>
+#include "stockList.h"
 using namespace std;
 
 void plagiarismReq();
-
+void getData(stockList);
 int main() {
     //declarations
     stockList stockList;
@@ -32,4 +33,11 @@ void plagiarismReq()
     cout << "This is my original work; apart from standard tutoring or class collaboration, "
         << "I neither received help nor copied this code from another source.";
 }
+
+//getData(stockList s) : Inputs all documented stocks and their data inside of a stockList
+//Arguments: s (stockList) | Returns: None
+void getData(stockList s) {
+
+}
+
 

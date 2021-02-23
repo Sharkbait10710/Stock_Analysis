@@ -7,12 +7,5 @@
 
 #include "stock.h"
 
-stock::stock() {
-	// TODO Auto-generated constructor stub
-
-}
-
-stock::~stock() {
-	// TODO Auto-generated destructor stub
-}
-
+using namespace std;
+	

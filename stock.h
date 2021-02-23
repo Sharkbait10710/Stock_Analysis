@@ -45,22 +45,22 @@ public:
 		percentGain = percentG;
 	}
 
-	void setPrice();
-	int getPrice();
-	void setShares();
-	int getShares();
-	void setSymbol();
-	std::string getSymbol();
-	void setHighPrice();
-	int getHighPrice();
-	void setLowPrice();
-	int getLowPrice();
-	void setOpeningPrice();
-	int getOpeningPrice();
-	void setPrevPrice();
-	int getPrevPrice();
-	void setPercentGain();
-	int getPercentGain();
+	int getPrice()
+		{return price;}
+	int getShares()
+		{return shares;}
+	std::string getSymbol()
+		{return string;}
+	int getHighPrice()
+		{return highPrice;}
+	int getLowPrice()
+		{return lowPrice;}
+	int getOpeningPrice()
+		{return openingPrice;}
+	int getPrevPrice()
+		{return prevPrice;}
+	int getPercentGain()
+		{return percentGain;}
 	void print();
 
 };

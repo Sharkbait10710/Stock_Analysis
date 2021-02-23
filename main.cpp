@@ -1,9 +1,10 @@
-/*
- * main.cpp
- *
- *  Created on: Feb 22, 2021
- *      Author: DangL
- */
+//*****************
+//Program Name: Fruit Drink Machine
+//Author: Dang Le & Caleb Clements
+//IDE Used: Eclipse & Visual Studios
+//Program description: This program aims to help a local stock trading company automate its systems such that
+//investors can see how their holdings performed at the end of the day by stock symbol and percent.
+//*****************
 #include <iostream>
 
 using namespace std;

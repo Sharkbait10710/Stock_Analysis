@@ -1,5 +1,5 @@
 //*****************
-//Program Name: Fruit Drink Machine
+//Program Name: Program 6: Stock Analysis
 //Author: Dang Le & Caleb Clements
 //IDE Used: Eclipse & Visual Studios
 //Program description: This program aims to help a local stock trading company automate its systems such that

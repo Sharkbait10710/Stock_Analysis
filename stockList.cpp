@@ -12,34 +12,20 @@ void stockList::printByGain() {
 
 }
 
-vector<string> stockList::tokenize(string line) {
-
-	vector<string> data;
-	unsigned counter = 0;
-	for (unsigned i = 0; i < line.size(); i++) {
-		if (line[i] == ' ') {
-			string container = "";
-			for (unsigned j = counter; j < i; j++) {
-				container += line[j];
-			}
-			if (!container.empty())data.push_back(container);
-			counter = i + 1;
-		}
-		if (i == line.size() - 1 && counter != i) {
-			string container = "";
-			for (unsigned j = counter; j <= i; j++) {
-				container += line[j];
-			}
-			if (!container.empty())data.push_back(container);
-		}
-	}
-	return data;
-}
 
 ostream& operator<< (ostream& os, const stock& s)
 {
-    os << s.name << " (" << s.gender
-       << ") [" << s.color << "]" << endl;
+    os << "Stock Symbol\tToday Open\t" <<
+    		"Today Close\tToday High\t Today Low\t" <<
+			"Previous Close\tVolume\n" << s.getSymbol() <<
+			"\t" << s.getopeningPrice() << "\t" <<
+			s.getclosingPrice() << "\t" <<
+			s.openingPrice()  << "\t" <<
+			s.todayHigh() << "\t" <<
+			s.todayLow() << "\t" <<
+			s.prevClose() << "\t" <<
+			s.volume() << "\t" <<
+			s.perGain() << endl;
     return os;
 }
 
@@ -58,7 +44,6 @@ ifstream& operator>> (ifstream& inf, stock& s)
     getline(inf, str);
     s.prevClose(stof(str));
     getline(inf, str);
-    s.volume(stof(str));
-
+    s.volume(stoi(str));
     return inf;
 }

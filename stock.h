@@ -10,7 +10,7 @@ class stock {
 private:
 	int price;
 	int shares;
-	string symbol;
+	std::string symbol;
 	int highPrice;
 	int lowPrice;
 	int openingPrice;

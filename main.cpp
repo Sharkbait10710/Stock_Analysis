@@ -37,7 +37,11 @@ void plagiarismReq()
 //getData(stockList s) : Inputs all documented stocks and their data inside of a stockList
 //Arguments: s (stockList) | Returns: None
 void getData(stockList s) {
-
+	stock input;
+	ifstream inputFile("stockData.txt");
+	while(getline(inputFile,input)){
+		cin >>
+	};
 }
 
 

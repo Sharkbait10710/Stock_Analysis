@@ -21,18 +21,7 @@ private:
 	float perGain;
 
 public:
-	stock()
-	{
-		//Default Constructor
-		volume = 0.0;
-		symbol = "";
-		todayHigh = 0.0;
-		todayLow = 0.0;
-		openingPrice = 0.0;
-		closingPrice = 0.0;
-		prevClose = 0.0;
-		perGain = 0.0;
-	}
+	stock() {setStockInfo(0.0, "", 0.0, 0.0, 0.0, 0.0, 0.0)} //Default Constructor
 
 	stock(int volume, string symbol, float highPrice, float lowPrice,
 		float openingPrice, float closingPrice, float prevClose) //Overloaded constructor
@@ -46,9 +35,7 @@ public:
 	float getOpeningPrice() {return openingPrice;}
 	float getClosingPrice() {return closingPrice;}
 	float getPrevClose() {return prevClose;}
-	float getPerGain() {return perGain;}
-	void print();
-
+	float getPerGain() { return openingPrice / closingPrice; }
 
 };
 

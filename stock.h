@@ -8,6 +8,8 @@
 using namespace std;
 
 class stock {
+friend ostream& operator<< (ifstream&, stock&);
+friend ifstream& operator>> (ifstream&, stock&);
 private:
 	int volume;
 	string symbol;

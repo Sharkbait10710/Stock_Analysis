@@ -39,9 +39,10 @@ void plagiarismReq()
 void getData(stockList s) {
 	stock input;
 	ifstream inputFile("stockData.txt");
-	while(getline(inputFile,input)){
-		cin >>
-	};
+	while(!inputFile.eof()) {
+		cin >> input;
+		s.push_Back(input);
+	}
 }
 
 

@@ -5,12 +5,13 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
 
 class stock {
 private:
 	float price;
 	int volume;
-	std::string symbol;
+	string symbol;
 	float todayHigh;
 	float todayLow;
 	float openingPrice;
@@ -33,7 +34,7 @@ public:
 		perGain = 0;
 	}
 
-	stock(float p, int v, std::string sym, float highP, float lowP,
+	stock(float p, int v, string sym, float highP, float lowP,
 		float openingP,float closingP, float prevP)
 	{
 		//Overloaded Constructor
@@ -51,8 +52,8 @@ public:
 		{return price;}
 	int getVolume()
 		{return volume;}
-	std::string getSymbol()
-		{return string;}
+	string getSymbol()
+		{return symbol;}
 	float getTodayHigh()
 		{return todayHigh;}
 	float getTodayLow()

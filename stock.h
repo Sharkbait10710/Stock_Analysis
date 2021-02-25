@@ -4,13 +4,13 @@
 
 #include <iostream>
 #include <string>
-using namespace std;
+
 
 class stock {
 private:
 	float price;
 	int volume;
-	string symbol;
+	std::string symbol;
 	float todayHigh;
 	float todayLow;
 	float openingPrice;

@@ -16,17 +16,15 @@
 #include <fstream>
 using namespace std;
 class stockList {
-	friend ostream& operator<< (ifstream&, stock&);
-	friend ifstream& operator>> (ifstream&, stock&);
 private:
-	deque<stock> indexByGain;
+	deque<int> indexByGain;
 	deque<stock> list;
 public:
 	stockList() {};
 	void sortStockList();
+	void insert(const stock&);
 	void printBySymbol();
 	void printByGain();
-	vector<string> tokenize(string);
 };
 
 #endif /* STOCKLIST_H_ */

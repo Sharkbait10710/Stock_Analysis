@@ -1,37 +1,33 @@
 #include "stockList.h"
 
 void stockList::sortStockList() {
-
+	sort(list.begin(), list.end());
+	for (unsigned i = 0; i < list.size(); i++) {
+		int greatest = i;
+		for (int j = i+1; j < list.size(); j++) {
+			if (list[greatest] < list[j]) greatest = j;
+		}
+		indexByGain.push_back(greatest);
+	}
 }
 
 void stockList::printBySymbol() {
-
+	sort(list.begin(), list.end());
+	cout << "printBySymbol\n";
+	for (unsigned i = 0; i < list.size(); i++) {
+		cout << list[i].getSymbol() << endl;
+	}
 }
 
 void stockList::printByGain() {
-
+	sortStockList();
+	cout << "printByGain\n";
+	for (unsigned i = 0; i < list.size(); i++) {
+		cout << list[indexByGain[i]].getPerGain() << endl;
+	}
 }
 
-
-ostream& operator<< (ostream& os, stock& s)
-{
-    os << "Stock Symbol\tOpening Price\t" <<
-    		"Closing Price\tToday High\t Today Low\t" <<
-			"Previous Close\tVolume\n" << s.getSymbol() <<
-			"\t" << s.getOpeningPrice() << "\t" <<
-			s.getClosingPrice() << "\t" <<
-			s.getOpeningPrice()  << "\t" <<
-			s.getTodayHigh() << "\t" <<
-			s.getTodayLow() << "\t" <<
-			s.getPrevClose() << "\t" <<
-			s.getVolume() << "\t" <<
-			s.getPerGain() << endl;
-    return os;
+void stockList::insert(const stock& s) {
+	list.push_back(s);
 }
 
-ifstream& operator>> (ifstream& inf, stock& s)
-{
-	inf >> s.symbol >> s.openingPrice >> s.todayHigh >>
-		s.todayLow >> s.prevClose >> s.volume;
-    return inf;
-}

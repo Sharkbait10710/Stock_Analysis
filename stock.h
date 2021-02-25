@@ -8,59 +8,63 @@ using namespace std;
 
 class stock {
 private:
-	int price;
-	int shares;
+	float price;
+	int volume;
 	string symbol;
-	int highPrice;
-	int lowPrice;
-	int openingPrice;
-	int prevPrice;
-	int percentGain;
+	float todayHigh;
+	float todayLow;
+	float openingPrice;
+	float closingPrice;
+	float prevClose;
+	int perGain;
 
 public:
 	stock()
 	{
 		//Default Constructor
 		price = 0;
-		shares = 0;
+		volume = 0;
 		symbol = "";
-		highPrice = 0;
-		lowPrice = 0;
+		todayHigh = 0;
+		todayLow = 0;
 		openingPrice = 0;
-		prevPrice = 0;
-		percentGain = 0;
+		closingPrice = 0;
+		prevClose = 0;
+		perGain = 0;
 	}
 
-	stock(int p, int s, std::string sym, int highP, int lowP,
-		int openingP, int prevP, int percentG)
+	stock(float p, int v, std::string sym, float highP, float lowP,
+		float openingP,float closingP, float prevP)
 	{
 		//Overloaded Constructor
 		price = p;
-		shares = s;
+		volume = v;
 		symbol = sym;
-		highPrice = highP;
-		lowPrice = lowP;
+		todayHigh = highP;
+		todayLow = lowP;
 		openingPrice = openingP;
-		prevPrice = prevP;
-		percentGain = percentG;
+		closingPrice = closingP;
+		prevClose = prevP;
 	}
 
-	int getPrice()
+	float getPrice()
 		{return price;}
-	int getShares()
-		{return shares;}
+	int getVolume()
+		{return volume;}
 	std::string getSymbol()
 		{return string;}
-	int getHighPrice()
-		{return highPrice;}
-	int getLowPrice()
-		{return lowPrice;}
-	int getOpeningPrice()
+	float getTodayHigh()
+		{return todayHigh;}
+	float getTodayLow()
+		{return todayLow;}
+	float getOpeningPrice()
 		{return openingPrice;}
-	int getPrevPrice()
-		{return prevPrice;}
-	int getPercentGain()
-		{return percentGain;}
+	float getClosingPrice()
+		{return closingPrice;}
+	float getPrevClose()
+		{return prevClose;}
+	float getPerGain()
+		{return perGain;}
 	void print();
 
 };

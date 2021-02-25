@@ -8,4 +8,8 @@
 #include "stock.h"
 
 using namespace std;
-	
+
+void print()
+{
+
+}

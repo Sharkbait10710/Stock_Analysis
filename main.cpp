@@ -5,13 +5,11 @@
 //Program description: This program aims to help a local stock trading company automate its systems such that
 //investors can see how their holdings performed at the end of the day by stock symbol and percent.
 //*****************
-#include <iostream>
-#include <iomanip>
 #include "stockList.h"
 using namespace std;
 
 void plagiarismReq();
-void getData(stockList);
+void getData(stockList&);
 int main() {
     //declarations
     stockList stockList;
@@ -36,12 +34,14 @@ void plagiarismReq()
 
 //getData(stockList s) : Inputs all documented stocks and their data inside of a stockList
 //Arguments: s (stockList) | Returns: None
-void getData(stockList s) {
-	stock input;
+void getData(stockList& s) {
 	ifstream inputFile("stockData.txt");
 	if (inputFile.is_open()) {
+		cout << "OPEN\n";
 		while(!inputFile.eof()) {
+			stock input;
 			inputFile >> input;
+			//cout << input;
 			s.insert(input);
 		}
 	inputFile.close();

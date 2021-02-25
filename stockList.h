@@ -8,16 +8,10 @@
 #ifndef STOCKLIST_H_
 #define STOCKLIST_H_
 #include "stock.h"
-#include <deque>
-#include <algorithm>
-#include <vector>
-#include <string>
-#include <iomanip>
-#include <fstream>
 using namespace std;
 class stockList {
 private:
-	deque<int> indexByGain;
+	deque<unsigned> indexByGain;
 	deque<stock> list;
 public:
 	stockList() {};
@@ -25,6 +19,8 @@ public:
 	void insert(const stock&);
 	void printBySymbol();
 	void printByGain();
+	float stock_sum();
 };
 
 #endif /* STOCKLIST_H_ */
+

@@ -34,16 +34,16 @@ ifstream& operator>> (ifstream& inf, stock& s)
 	string str;
     getline(inf, s.symbol);
     getline(inf, str);
-    s.openingPrice(stof(str));
+    s.setopeningPrice((stof(str)));
     getline(inf, str);
-    s.closingPrice(stof(str));
+    s.setclosingPrice((stof(str)));
     getline(inf, str);
-    s.todayHigh(stof(str));
+    s.settodayHigh((stof(str)));
     getline(inf, str);
-    s.todayLow(stof(str));
+    s.settodayLow((stof(str)));
     getline(inf, str);
-    s.prevClose(stof(str));
+    s.setprevClose((stof(str)));
     getline(inf, str);
-    s.volume(stoi(str));
+    s.setvolume((stoi(str)));
     return inf;
 }

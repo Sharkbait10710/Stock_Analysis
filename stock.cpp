@@ -10,7 +10,7 @@
 using namespace std;
 
 
-void setStockInfo(int v, string s, float h, float l, float o, float c, float p) {
+void stock::setStockInfo(int v, string s, float h, float l, float o, float c, float p) {
 	volume = v; symbol = s; todayHigh = h; todayLow = l; openingPrice = o; closingPrice = c; prevClose = p;
 	perGain = (closingPrice - prevClose) / prevClose * 100;
 }

@@ -72,9 +72,9 @@ public:
 
 	stock(int volume, string symbol, float highPrice, float lowPrice,
 		float openingPrice, float closingPrice, float prevClose) //Overloaded constructor
-	{setStockInfo(volume, symbol, highPrice, lowPrice, openingPrice, closingPrice, prevClose);}
+	{setStockInfo(int, string, float, float, float, float, float);}
 
-	void setStockInfo(int v, string s, float h, float l, float o, float c, float p);
+	void setStockInfo(int, string, float, float, float, float, float);
 	int getVolume() {return volume;}
 	string getSymbol() {return symbol;}
 	float getTodayHigh() {return todayHigh;}
@@ -84,8 +84,7 @@ public:
 	float getPrevClose() {return prevClose;}
 	float getPerGain() {return perGain;}
 	bool operator< (const stock &other) const {
-	        return symbol < other.symbol;
-	    }
+	        return symbol < other.symbol; }
 
 
 

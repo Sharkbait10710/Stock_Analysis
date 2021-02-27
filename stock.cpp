@@ -6,29 +6,14 @@
  */
 
 #include "stock.h"
-#include <iostream>
-#include <fstream>
-#include <iomanip>
 #include <array>
-#include <cstdio>
 using namespace std;
 
-void print()
-{
 
+void setStockInfo(int v, string s, float h, float l, float o, float c, float p) {
+	volume = v; symbol = s; todayHigh = h; todayLow = l; openingPrice = o; closingPrice = c; prevClose = p;
+	perGain = (closingPrice - prevClose) / prevClose * 100;
 }
-
-//void setStockInfo(int v, string sym, float highP, float lowP, float openingP,
-//	float closingP, float prevP) //Required function to set all of the stock data.
-//{
-//	volume = v;
-//	symbol = sym;
-//	todayHigh = highP;
-//	todayLow = lowP;
-//	openingPrice = openingP;
-//	closingPrice = closingP;
-//	prevClose = prevP;
-//}
 
 ostream& operator<< (ostream& os, const stock& s)
 {

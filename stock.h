@@ -79,7 +79,7 @@ public:
 	string getSymbol() {return symbol;}
 	float getTodayHigh() {return todayHigh;}
 	float getTodayLow() {return todayLow;}
-	float getOpeningPrice() {return openingPrice;}a
+	float getOpeningPrice() {return openingPrice;}
 	float getClosingPrice() {return closingPrice;}
 	float getPrevClose() {return prevClose;}
 	float getPerGain() {return perGain;}

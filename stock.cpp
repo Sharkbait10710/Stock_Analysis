@@ -3,16 +3,8 @@ using namespace std;
 
 ostream& operator<< (ostream& os, const stock& s)
 {
-	const int i = 19;
-    os << left << setw(i) << setfill(' ') << "Stock Symbol"
-       << left << setw(i) << setfill(' ') << "Opening Price"
-	   << left << setw(i) << setfill(' ') << "Closing Price"
-	   << left << setw(i) << setfill(' ') <<"Today High"
-	   << left << setw(i) << setfill(' ') <<"Today Low"
-	   << left << setw(i) << setfill(' ') << "Previous Close"
-	   << left << setw(i) << setfill(' ') << "Volume"
-	   << left << setw(i) << setfill(' ') <<"Percent Gain\n"
-	   << left << setw(i) << setfill(' ') << s.symbol
+	const int i = 8;
+    os << left << setw(i) << setfill(' ') << s.symbol
 	   << left << setw(i) << setfill(' ') << s.openingPrice
 	   << left << setw(i) << setfill(' ') << s.closingPrice
 	   << left << setw(i) << setfill(' ') << s.todayHigh

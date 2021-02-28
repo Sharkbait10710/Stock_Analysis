@@ -90,7 +90,6 @@ public:
 	float getClosingPrice() {return closingPrice;}
 	float getPrevClose() {return prevClose;}
 	float getPerGain() {return perGain;}
-	void print();
 	bool operator< (const stock &other) const {
 	        return symbol < other.symbol;
 	    }

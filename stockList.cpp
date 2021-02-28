@@ -78,7 +78,11 @@ void stockList::sortStockList() {
 //printBySymbol() : print out the list by symbol in alphabetical order
 //Arguments: None | Returns: None
 void stockList::printBySymbol() {
-	cout << "Financial Report\n";
+	cout << "*********\tDang and Caleb's Portfolio Program\t*********\n"
+		<< "*********\t\tFinancial Report\t\t*********\n"
+		<< "Stock\tToday\t\tPrevious\t\tPercent\n"
+		<< "Symbol\tOpen\tClose\tHigh\tLow\tClose\tGain\tVolume\n"
+		<< "------\t----\t-----\t----\t---\t-----\t----\t-----\n";
 	for (unsigned i = 0; i < list.size(); i++) {
 		cout << list[i];
 	}
@@ -88,7 +92,10 @@ void stockList::printBySymbol() {
 //printByGain() : print out the list by percent gain in numerical order
 //Arguments: None | Returns: None
 void stockList::printByGain() {
-	cout << "printByGain\n";
+	cout << "*********\t\tGain/Loss\t\t*********\n"
+		<< "Stock\tToday\t\tPrevious\t\tPercent\n"
+		<< "Symbol\tOpen\tClose\tHigh\tLow\tClose\tGain\tVolume\n"
+		<< "------\t----\t-----\t----\t---\t-----\t----\t-----\n";
 	for (unsigned i = 0; i < list.size(); i++) {
 		cout << list[indexByGain[i]];
 	}

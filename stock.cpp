@@ -1,6 +1,19 @@
 #include "stock.h"
 using namespace std;
 
+//setStockInfo() : Sets the stock info for a given stock.
+//Arguments: v, s, h, l, o, c, p | Returns: None
+void stock::setStockInfo(int v, string s, float h,
+float l, float o, float c, float p) 
+{
+	volume = v; symbol = s; todayHigh = h;
+	todayLow = l; openingPrice = o;
+	closingPrice = c; prevClose = p;
+	perGain = (closingPrice - prevClose) / prevClose * 100;
+}
+
+//ostream& operator<<() :Overloads the << operator
+//Arguments: ostream& os, const stock& s | Returns: os
 ostream& operator<< (ostream& os, const stock& s)
 {
 	const int i = 8;
@@ -15,6 +28,8 @@ ostream& operator<< (ostream& os, const stock& s)
     return os;
 }
 
+//ifstream& operator>>() :Overloads the >> operator
+//Arguments: ifstream& inf, const stock& s | Returns: inf
 ifstream& operator>> (ifstream& inf, stock& s)
 {
 	inf >> s.symbol; string str; inf >> str;

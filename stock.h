@@ -70,18 +70,11 @@ public:
 		perGain = 0.0;
 	}
 
-	stock(int volume, string symbol, float highPrice, float lowPrice,
+	stock(int volume, string symbol, float highPrice, float lowPrice, //Overloaded Constructor
 		float openingPrice, float closingPrice, float prevClose)
 	{setStockInfo(volume, symbol, highPrice, lowPrice, openingPrice, closingPrice, prevClose);}
 
-	void setStockInfo(int v, string s, float h,
-			float l, float o, float c, float p) {
-		volume = v; symbol = s; todayHigh = h;
-		todayLow = l; openingPrice = o;
-		closingPrice= c; prevClose = p;
-		perGain = (closingPrice - prevClose) / prevClose *100;
-	}
-
+	void setStockInfo(int, string, float, float, float, float, float); //All setters in one function per project specs.
 	int getVolume() {return volume;}
 	string getSymbol() {return symbol;}
 	float getTodayHigh() {return todayHigh;}

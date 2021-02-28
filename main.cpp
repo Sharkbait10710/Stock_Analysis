@@ -48,3 +48,9 @@ void getData(stockList& s) {
 }
 
 
+/*CALEB'S WORK- Did stock.cpp/ stock.h except the ostream and ifstream.  
+Adjusted ostream to work properly when called by forloop in stocklist.
+* Also did frontend for the project to make desired output match the textbook.
+* 
+* DANG'S WORK-
+* /

@@ -57,23 +57,12 @@ private:
 	float prevClose;
 	float perGain;
 public:
-	stock()
-	{
-		//Default Constructor
-		volume = 0;
-		symbol = "";
-		todayHigh = 0.0;
-		todayLow = 0.0;
-		openingPrice = 0.0;
-		closingPrice = 0.0;
-		prevClose = 0.0;
-		perGain = 0.0;
-	}
-
+	//Default Constructor
+	stock() {setStockInfo(0, " ", 0, 0, 0, 0, 0);}
 	//Overloaded Constructor
 	stock(int volume, string symbol, float highPrice, float lowPrice,
-		float openingPrice, float closingPrice, float prevClose)
-	{setStockInfo(volume, symbol, highPrice, lowPrice,
+		float openingPrice, float closingPrice, float prevClose) {
+		setStockInfo(volume, symbol, highPrice, lowPrice,
 			openingPrice, closingPrice, prevClose);}
 
 	//All setters in one function per project specs.

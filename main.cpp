@@ -53,4 +53,7 @@ Adjusted ostream to work properly when called by forloop in stocklist.
 * Also did frontend for the project to make desired output match the textbook.
 * 
 * DANG'S WORK-
-* /
+* I worked mostly on backend. I wrote the sortStockList function and stockList functions.
+* I wrote the stockList h file.
+* I wrote the getData function as well.
+* /*/

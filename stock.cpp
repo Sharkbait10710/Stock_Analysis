@@ -23,8 +23,8 @@ ostream& operator<< (ostream& os, const stock& s)
 	   << left << setw(i) << setfill(' ') << s.todayHigh
 	   << left << setw(i) << setfill(' ') << s.todayLow
 	   << left << setw(i) << setfill(' ') << s.prevClose
-	   << left << setw(i) << setfill(' ') << s.volume
-	   << left << setw(i) << setfill(' ') << s.perGain << endl;
+	   << left << setw(i) << setfill(' ') << s.perGain
+	   << left << setw(i) << setfill(' ') << s.volume << endl;
     return os;
 }
 

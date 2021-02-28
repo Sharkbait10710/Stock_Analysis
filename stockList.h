@@ -1,10 +1,18 @@
 /*
- * stockList.h
- *
- *  Created on: Feb 22, 2021
- *      Author: DangL
+---------------------------------------
+               stockList
+---------------------------------------
+-indexByGain : deque<unsigned>
+-list : deque<stock>
+---------------------------------------
++stockList()
++ sortStockList() : void
++ insert(const stock&) : void
++ printBySymbol() : void
++ printByGain() : void
++ stock_sum() : float
+---------------------------------------
  */
-
 #ifndef STOCKLIST_H_
 #define STOCKLIST_H_
 #include "stock.h"

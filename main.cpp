@@ -37,11 +37,9 @@ void plagiarismReq()
 void getData(stockList& s) {
 	ifstream inputFile("stockData.txt");
 	if (inputFile.is_open()) {
-		cout << "OPEN\n";
 		while(!inputFile.eof()) {
 			stock input;
 			inputFile >> input;
-			//cout << input;
 			s.insert(input);
 		}
 	inputFile.close();

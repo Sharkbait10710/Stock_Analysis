@@ -1,16 +1,47 @@
-
+/*
+---------------------------------------
+               stock
+---------------------------------------
+- volume : int
+- symbol : string
+- todayHigh : float
+- todayLow : float
+- openingPrice : float
+- closingPrice : float
+- prevClose : float
+- perGain : float
+---------------------------------------
+<<friend>> operator<<(ostream&, const stock&) :  ostream&
+<<friend>> operator>>(ifstream& , stock&) : ifstream&
+---------------------------------------
++stock()
++stock(int, string, float, float, float, float, float)
++setStockInfo(int, string, float,float, float, float, float) : void
++getVolume() const : int
++getSymbol() const : string
++getTodayHigh() const : float
++getTodayLow() const : float
++getOpeningPrice() const : float
++getClosingPrice() const : float
++getPerGain() const : float
++setVolume(int) : void
++setSymbol(string) : void
++setTodayHigh(float) : void
++setTodayLow(float) : void
++setOpeningPrice(float) : void
++setClosingPrice(float) : void
++setPerGain(float) : void
++operator<(stock&) : bool
+---------------------------------------
+ */
 #ifndef STOCK_H_
 #define STOCK_H_
-
 #include <iostream>
 #include <fstream>
 #include <deque>
 #include <algorithm>
-#include <vector>
 #include <string>
-#include <iostream>
 #include <iomanip>
-#include <numeric>
 using namespace std;
 
 class stock {
@@ -25,7 +56,6 @@ private:
 	float closingPrice;
 	float prevClose;
 	float perGain;
-
 public:
 	stock()
 	{
@@ -41,13 +71,17 @@ public:
 	}
 
 	stock(int volume, string symbol, float highPrice, float lowPrice,
-		float openingPrice, float closingPrice, float prevClose) //Overloaded constructor
+		float openingPrice, float closingPrice, float prevClose)
 	{setStockInfo(volume, symbol, highPrice, lowPrice, openingPrice, closingPrice, prevClose);}
 
-	void setStockInfo(int v, string s, float h, float l, float o, float c, float p) {
-		volume = v; symbol = s; todayHigh = h; todayLow = l; openingPrice = o; closingPrice= c; prevClose = p;
+	void setStockInfo(int v, string s, float h,
+			float l, float o, float c, float p) {
+		volume = v; symbol = s; todayHigh = h;
+		todayLow = l; openingPrice = o;
+		closingPrice= c; prevClose = p;
 		perGain = (closingPrice - prevClose) / prevClose *100;
 	}
+
 	int getVolume() {return volume;}
 	string getSymbol() {return symbol;}
 	float getTodayHigh() {return todayHigh;}
@@ -60,9 +94,6 @@ public:
 	bool operator< (const stock &other) const {
 	        return symbol < other.symbol;
 	    }
-
-
-
 };
 
 #endif /* STOCK_H_ */

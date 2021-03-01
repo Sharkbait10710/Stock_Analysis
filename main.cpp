@@ -44,7 +44,7 @@ void getData(stockList& s) {
 		}
 	inputFile.close();
 	}
-	else cout << "File opening error\n";
+	else cerr << "File opening error\n";
 }
 
 

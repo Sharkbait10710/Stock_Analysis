@@ -44,7 +44,10 @@ void getData(stockList& s) {
 		}
 	inputFile.close();
 	}
-	else cerr << "File opening error\n";
+	else {
+		cerr << "File opening error\n";
+		exit(0);
+	}
 }
 
 
